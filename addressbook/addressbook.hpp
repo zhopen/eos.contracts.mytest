@@ -12,7 +12,7 @@ public:
 private:
   TABLE addressbook_t
   {
-    uint16_t id;
+    uint64_t id;
     string   name;         
     uint8_t  age;                 
     uint64_t phonenumber;
@@ -30,6 +30,7 @@ public:
 
   ACTION add( name account, string name, uint8_t age,  uint64_t phonenumber, string address );
   ACTION remove(name account, uint64_t id);
+  ACTION update(name account, uint64_t id, string name, uint8_t age,  uint64_t phonenumber, string address);
 
 // public:
 //   template <typename T>

@@ -1,5 +1,5 @@
-#include "addressbook.hpp"
 #include <eosiolib/asset.hpp>
+#include "addressbook.hpp"
 using namespace eosio;
 
  ACTION addressbook::add( name account, string name, uint8_t age,  uint64_t phonenumber, string address ) {
@@ -23,5 +23,20 @@ ACTION addressbook::remove(name account, uint64_t id) {
    addressbooks.erase(itr);
 }
 
-EOSIO_DISPATCH( addressbook, (add)(remove) ) 
+ACTION addressbook::update(name account, uint64_t id, string name, uint8_t age,  uint64_t phonenumber, string address) {
+   require_auth(account);
+   addressbooks_t addressbooks(_self, account.value);  
+   auto itr = addressbooks.find(id);
+   addressbooks.modify( itr, 
+                        account, 
+                        [&]( auto& row ){
+                           row.name        = name;              
+                           row.age         = age;              
+                           row.phonenumber = phonenumber;         
+                           row.address     = address;               
+                        }
+               );  
+}
+
+EOSIO_DISPATCH( addressbook, (add)(remove)(update) ) 
 

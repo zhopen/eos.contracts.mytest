@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Wed Apr 10 11:29:54 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Fri Apr 19 14:26:53 2019",
     "version": "eosio::abi/1.1",
     "structs": [
         {
@@ -34,7 +34,7 @@
             "fields": [
                 {
                     "name": "id",
-                    "type": "uint16"
+                    "type": "uint64"
                 },
                 {
                     "name": "name",
@@ -67,6 +67,36 @@
                     "type": "uint64"
                 }
             ]
+        },
+        {
+            "name": "update",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "age",
+                    "type": "uint8"
+                },
+                {
+                    "name": "phonenumber",
+                    "type": "uint64"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                }
+            ]
         }
     ],
     "types": [],
@@ -79,6 +109,11 @@
         {
             "name": "remove",
             "type": "remove",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "update",
+            "type": "update",
             "ricardian_contract": ""
         }
     ],
