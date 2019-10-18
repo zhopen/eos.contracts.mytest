@@ -1,6 +1,7 @@
 #include <eosiolib/eosio.hpp>
 #include <eosiolib/print.hpp>
 
+
 using namespace eosio;
 
 class hello : public contract {
@@ -9,8 +10,9 @@ class hello : public contract {
 
     [[eosio::action]]
     void hi( name user ) {
-	    require_auth(user);
-        print( "Hello, ", name{user});
+	    //require_auth(user);
+        //print( "Hello, ", name{user});
+    	eosio_assert(0, "啊哈啊啊ab,c,c,c,c,c,c,}");
       }
 	  
 	[[eosio::action]]
@@ -20,5 +22,5 @@ class hello : public contract {
 
    }
 };
-EOSIO_DISPATCH( hello, (hi)(hi2))
+//EOSIO_DISPATCH( hello, (hi)(hi2))
 
