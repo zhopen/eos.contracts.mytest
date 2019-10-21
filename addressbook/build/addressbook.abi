@@ -1,6 +1,7 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Fri Apr 19 14:26:53 2019",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
     "version": "eosio::abi/1.1",
+    "types": [],
     "structs": [
         {
             "name": "add",
@@ -55,6 +56,20 @@
             ]
         },
         {
+            "name": "clean",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "batch_size",
+                    "type": "int32"
+                }
+            ]
+        },
+        {
             "name": "remove",
             "base": "",
             "fields": [
@@ -99,11 +114,15 @@
             ]
         }
     ],
-    "types": [],
     "actions": [
         {
             "name": "add",
             "type": "add",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "clean",
+            "type": "clean",
             "ricardian_contract": ""
         },
         {
@@ -127,6 +146,5 @@
         }
     ],
     "ricardian_clauses": [],
-    "variants": [],
-    "abi_extensions": []
+    "variants": []
 }

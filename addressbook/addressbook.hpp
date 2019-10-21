@@ -1,5 +1,4 @@
 #include <eosiolib/eosio.hpp>
-
 using namespace eosio;
 using std::string;
 
@@ -31,7 +30,7 @@ public:
   ACTION add( name account, string name, uint8_t age,  uint64_t phonenumber, string address );
   ACTION remove(name account, uint64_t id);
   ACTION update(name account, uint64_t id, string name, uint8_t age,  uint64_t phonenumber, string address);
-
+  ACTION clean( name account, int32_t batch_size);
 // public:
 //   template <typename T>
 //   void print_rows(T & itr, T & itr_end, int32_t limit)
