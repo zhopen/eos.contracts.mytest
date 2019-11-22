@@ -10,9 +10,9 @@ class hello : public contract {
 
     [[eosio::action]]
     void hi( name user ) {
-	    //require_auth(user);
-        //print( "Hello, ", name{user});
-    	eosio_assert(0, "啊哈啊啊ab,c,c,c,c,c,c,}");
+	    require_auth(user);
+        print( "Hello, ", name{user});
+    	//eosio_assert(0, "哈啊哈{ab,c,c,c,c,c,c,}");
       }
 	  
 	[[eosio::action]]
