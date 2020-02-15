@@ -145,6 +145,11 @@
             "key_types": []
         }
     ],
-    "ricardian_clauses": [],
+    "ricardian_clauses": [
+        {
+            "id": "Main Info",
+            "body": "version: 1.0.0\ncdt: v1.6.2\ntitle: addressbook"
+        }
+    ],
     "variants": []
 }
