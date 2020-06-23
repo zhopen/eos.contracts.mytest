@@ -14,7 +14,12 @@
             ]
         },
         {
-            "name": "hi2",
+            "name": "hiany",
+            "base": "",
+            "fields": []
+        },
+        {
+            "name": "hiself",
             "base": "",
             "fields": []
         }
@@ -26,8 +31,13 @@
             "ricardian_contract": ""
         },
         {
-            "name": "hi2",
-            "type": "hi2",
+            "name": "hiany",
+            "type": "hiany",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "hiself",
+            "type": "hiself",
             "ricardian_contract": ""
         }
     ],
